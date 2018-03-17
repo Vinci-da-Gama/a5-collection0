@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+
 import { FormGroupComponent } from './form-group/form-group.component';
-import { ResultPageComponent } from './result-page/result-page.component';
+
+const fgcRoute: Routes = [
+	{ path: '/authForm', component: FormGroupComponent }
+];
 
 @NgModule({
 	imports: [
-		CommonModule
+		RouterModule.forChild(fgcRoute)
 	],
-	declarations: [FormGroupComponent, ResultPageComponent]
+	exports: [RouterModule]
 })
-export class FormGroupPipeI18nTooltipPopoverModalModule { }
+export class Portion1RouteModule { }
