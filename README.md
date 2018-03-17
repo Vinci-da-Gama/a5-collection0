@@ -33,6 +33,7 @@ Scaffold  | Usage
 --> add app-routing.module.ts, and cp and paste content, then add operators.ts and cp and paste content, last one is compare tsconfig.json --> .gitignore at bottom add these 3
 semantic/
 semantic.json
+.angular-cli.json
 npm-install.txt
 .editorconfig
 README.md

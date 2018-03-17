@@ -43,6 +43,7 @@ Thumbs.db
 
 semantic/
 semantic.json
+.angular-cli.json
 npm-install.txt
 .editorconfig
 README.md
