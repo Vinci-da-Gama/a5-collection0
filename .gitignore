@@ -44,6 +44,7 @@ Thumbs.db
 semantic/
 semantic.json
 .angular-cli.json
+src/environments/firebase.config.ts
 npm-install.txt
 .editorconfig
 README.md
