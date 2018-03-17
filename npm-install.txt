@@ -2,7 +2,7 @@
 npm i -S @angular/animations @angular/common @angular/compiler @angular/core @angular/forms @angular/http @angular/platform-browser @angular/platform-browser-dynamic @angular/router core-js ng2-semantic-ui rxjs zone.js lodash.clonedeep
 
 npm i -S semantic-ui
-FolderName: semantic
+FolderName: semanticui
 
 npm uninstall --save @angular/animations @angular/common @angular/compiler @angular/core @angular/forms @angular/http @angular/platform-browser @angular/platform-browser-dynamic @angular/router core-js bootstrap ng2-semantic-ui rxjs semantic-ui zone.js
 

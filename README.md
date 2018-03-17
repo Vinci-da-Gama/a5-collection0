@@ -1,10 +1,6 @@
 # A5Collection0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
-```
-git config user.name "Vinci-da-Game"
-git config user.email "11582145@student.uts.edu.au"
-```
 
 ## Create a5 pj with scss
 ```
@@ -33,7 +29,11 @@ Scaffold  | Usage
 
 ## After you init pj -- Step 1 N 2
 1st: npm init -y to create package.json, then modified it according to __package-sample.json. goes into src/app folder --> cd src/app/ && touch app-routing.module.ts operators.ts && cd ../../ 
---> add app-routing.module.ts, and cp and paste content, then add operators.ts and cp and paste content, last one is compare tsconfig.json
+--> add app-routing.module.ts, and cp and paste content, then add operators.ts and cp and paste content, last one is compare tsconfig.json --> .gitignore at bottom add these 3
+semantic/
+semantic.json
+npm-install.txt
+.editorconfig
 
 2nd: ng g m share-module && cd ./src/app/share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
 
@@ -43,11 +43,13 @@ Scaffold  | Usage
 3rd: cd src/ && mkdir services validators contracts pipes mc && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../../
 
 ## tslint.json
+```javascript
 "indent": [
 	true,
 	"tabs",
 	4
 ],
+```
 
 Install Bootstrap or ng2-semantic-ui(prefer this, no jquery required.), you can include css and js in angular-cli.json
 ### bootstrap in angular-cli.json
