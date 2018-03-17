@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Route } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { SuiModule } from 'ng2-semantic-ui';
 import { SidebarOutletComponent } from './sidebar-outlet/sidebar-outlet.component';

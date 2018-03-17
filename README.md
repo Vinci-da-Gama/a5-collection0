@@ -40,9 +40,51 @@ README.md
 2nd: ng g m share-module && cd ./src/app/share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
 
 ## app.module.ts
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+
+import { SuiModule } from 'ng2-semantic-ui';
+import { SharedModule } from './share-module/share-module.module';
+import { AppRoutingModule } from './app-routing.module';
+import { StarRatingModule } from 'angular-star-rating';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { ClickOutsideModule } from 'ng-click-outside';
+import { TextMaskModule } from 'angular2-text-mask';
+import { AppComponent } from './app.component';
+import { InitPageModule } from './init-page/init-page.module';
+
+import { CookieService } from 'ngx-cookie-service';
+
+@NgModule({
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		SuiModule,
+		SharedModule,
+		AppRoutingModule,
+		StarRatingModule.forRoot(),
+		RoundProgressModule,
+		ClickOutsideModule,
+		TextMaskModule,
+		InitPageModule
+	],
+	providers: [
+		{ provide: APP_BASE_HREF, useValue: '/' },
+		CookieService
+	],
+	bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ## Step 3
-3rd: cd src/ && mkdir services validators contracts pipes mc && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../../
+3rd: cd src/ && mkdir services validators contracts pipes && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../../
 
 ## tslint.json
 ```javascript
@@ -76,10 +118,34 @@ it will create new folder called semantic or semanticui, enter it, run gulp buil
 "scripts": []
 ```
 ---
+### For moment tether popper.js in .angular-cli.json
+moment tether popper.js
+```javascript
+"scripts": [
+    "../node_modules/moment/min/moment.min.js",
+    "../node_modules/tether/dist/js/tether.min.js",
+    "../node_modules/popper.js/dist/umd/popper.min.js"
+]
+```
+---
+
+### For chart.js
+```javascript
+import Chart from 'chart.js';
+```
+---
+
+### For intl
+in polyfills.ts, uncomment these 2 at bottom.
+```javascript
+import 'intl';  // Run `npm install --save intl`.
+import 'intl/locale-data/jsonp/en';
+```
+---
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` || `ng serve --aot` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
