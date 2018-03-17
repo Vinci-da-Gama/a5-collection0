@@ -42,5 +42,7 @@ testem.log
 Thumbs.db
 
 semantic/
+semantic.json
 npm-install.txt
 .editorconfig
+README.md

@@ -34,6 +34,7 @@ semantic/
 semantic.json
 npm-install.txt
 .editorconfig
+README.md
 
 2nd: ng g m share-module && cd ./src/app/share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
 
