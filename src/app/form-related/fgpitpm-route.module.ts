@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormGroupComponent } from './form-group/form-group.component';
 
 const fgcRoute: Routes = [
-	{ path: '/authForm', component: FormGroupComponent }
+	{ path: 'authForm', component: FormGroupComponent }
 ];
 
 @NgModule({
