@@ -17,10 +17,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { SuiModule } from 'ng2-semantic-ui';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { StarRatingModule } from 'angular-star-rating';
-import { RoundProgressModule } from 'angular-svg-round-progressbar';
+// import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { TextMaskModule } from 'angular2-text-mask';
-import { AgmCoreModule } from '@agm/core';
+// import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { InitPageModule } from './init-page/init-page.module';
 import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
@@ -46,14 +46,14 @@ import { CookieService } from 'ngx-cookie-service';
 		SuiModule,
 		NgxSpinnerModule,
 		StarRatingModule.forRoot(),
-		RoundProgressModule,
+		// RoundProgressModule,
 		ClickOutsideModule,
 		TextMaskModule,
-		AgmCoreModule.forRoot(
+		/* AgmCoreModule.forRoot(
 			{
 				apiKey: 'AIzaSyBeYVe4dN0JTNcmgSdXTb6t-cCXEucUtwU'
 			}
-		),
+		), */
 		InitPageModule,
 		FormGroupPipeI18nTooltipPopoverModalModule,
 		InputOutputMapChartRoundprocessModule

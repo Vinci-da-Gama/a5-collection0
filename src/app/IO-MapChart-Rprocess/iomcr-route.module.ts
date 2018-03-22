@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ExchangeRateComponent } from './exchange-rate-map/exchange-rate.component';
+import { SupplyRateComponent } from './pass-rate-by-route-parameter/supply-rate.component';
 
 const mapexrateRoute: Routes = [
-	{ path: 'map-exchangeRage', component: ExchangeRateComponent }
+	{ path: 'map-exchangeRage', component: ExchangeRateComponent },
+	{ path: 'support-rate/:rate', component: SupplyRateComponent }
 ];
 
 @NgModule({

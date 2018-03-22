@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExchangeRateComponent } from './exchange-rate.component';
+import { MixedChartComponent } from './mixed-chart.component';
 
-describe('ExchangeRateComponent', () => {
-	let component: ExchangeRateComponent;
-	let fixture: ComponentFixture<ExchangeRateComponent>;
+describe('MixedChartComponent', () => {
+	let component: MixedChartComponent;
+	let fixture: ComponentFixture<MixedChartComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ExchangeRateComponent]
+			declarations: [MixedChartComponent]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ExchangeRateComponent);
+		fixture = TestBed.createComponent(MixedChartComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

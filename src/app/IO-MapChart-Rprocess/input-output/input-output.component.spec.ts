@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExchangeRateComponent } from './exchange-rate.component';
+import { InputOutputComponent } from './input-output.component';
 
-describe('ExchangeRateComponent', () => {
-	let component: ExchangeRateComponent;
-	let fixture: ComponentFixture<ExchangeRateComponent>;
+describe('InputOutputComponent', () => {
+	let component: InputOutputComponent;
+	let fixture: ComponentFixture<InputOutputComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ExchangeRateComponent]
+			declarations: [InputOutputComponent]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ExchangeRateComponent);
+		fixture = TestBed.createComponent(InputOutputComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

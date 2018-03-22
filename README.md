@@ -113,7 +113,7 @@ export class AppModule { }
 ```
 
 ## Step 3
-3rd: cd src/ && mkdir services validators contracts pipes directive providers && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../../
+3rd: cd src/ && mkdir services validators contracts pipes components helpers && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
 
 ## tslint.json
 ```javascript

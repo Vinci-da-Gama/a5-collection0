@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExchangeRateComponent } from './exchange-rate.component';
+import { SemicirProgressComponent } from './semicircle-roundprogress.component';
 
-describe('ExchangeRateComponent', () => {
-	let component: ExchangeRateComponent;
-	let fixture: ComponentFixture<ExchangeRateComponent>;
+describe('SemicirProgressComponent', () => {
+	let component: SemicirProgressComponent;
+	let fixture: ComponentFixture<SemicirProgressComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ExchangeRateComponent]
+			declarations: [SemicirProgressComponent]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ExchangeRateComponent);
+		fixture = TestBed.createComponent(SemicirProgressComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

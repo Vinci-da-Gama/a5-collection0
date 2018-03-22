@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExchangeRateComponent } from './exchange-rate.component';
+import { AnguGoomapComponent } from './angu-goomap.component';
 
-describe('ExchangeRateComponent', () => {
-	let component: ExchangeRateComponent;
-	let fixture: ComponentFixture<ExchangeRateComponent>;
+describe('AnguGoomapComponent', () => {
+	let component: AnguGoomapComponent;
+	let fixture: ComponentFixture<AnguGoomapComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ExchangeRateComponent]
+			declarations: [AnguGoomapComponent]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ExchangeRateComponent);
+		fixture = TestBed.createComponent(AnguGoomapComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExchangeRateComponent } from './exchange-rate.component';
+import { HorizontalBarComponent } from './horizontal-bar.component';
 
-describe('ExchangeRateComponent', () => {
-	let component: ExchangeRateComponent;
-	let fixture: ComponentFixture<ExchangeRateComponent>;
+describe('HorizontalBarComponent', () => {
+	let component: HorizontalBarComponent;
+	let fixture: ComponentFixture<HorizontalBarComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ExchangeRateComponent]
+			declarations: [HorizontalBarComponent]
 		})
 			.compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ExchangeRateComponent);
+		fixture = TestBed.createComponent(HorizontalBarComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

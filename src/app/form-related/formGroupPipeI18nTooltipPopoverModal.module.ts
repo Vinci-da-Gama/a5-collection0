@@ -7,7 +7,7 @@ import { SuiDimmerModule, SuiRatingModule, SuiPopupModule } from 'ng2-semantic-u
 import { FormGroupComponent } from './form-group/form-group.component';
 import { ConfirmModalComponent } from '../../helpers/confirm-modal/confirm-modal.component';
 import { RatingComponent } from './rating/rating.component';
-import { FixNumberPipe } from '../../helpers/pipes/fix-number.pipe';
+import { FixNumberPipe } from '../../pipes/fix-number.pipe';
 
 
 @NgModule({
