@@ -61,7 +61,6 @@ import { SharedModule } from './share-module/share-module.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SuiModule } from 'ng2-semantic-ui';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { StarRatingModule } from 'angular-star-rating';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { TextMaskModule } from 'angular2-text-mask';
@@ -91,7 +90,6 @@ import { CookieService } from 'ngx-cookie-service';
 		AppRoutingModule,
 		SuiModule,
 		NgxSpinnerModule,
-		StarRatingModule.forRoot(),
 		RoundProgressModule,
 		ClickOutsideModule,
 		TextMaskModule,

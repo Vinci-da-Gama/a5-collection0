@@ -91,7 +91,7 @@ export class ExchangeRateComponent implements OnInit {
 		rounded: true,
 		clockwise: false,
 		responsive: true,
-		duration: 3000,
+		duration: 3300,
 		animation: 'easeInOutQuad',
 		animDelay: 0
 	};
@@ -107,7 +107,7 @@ export class ExchangeRateComponent implements OnInit {
 		rounded: false,
 		clockwise: true,
 		responsive: true,
-		duration: 3000,
+		duration: 3330,
 		animation: 'easeInOutCubic',
 		animDelay: 0
 	};
