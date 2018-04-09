@@ -39,7 +39,7 @@ npm-install.txt
 .editorconfig
 README.md
 
-2nd: ng g m share-module && cd ./src/app/share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
+2nd: ng g m share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
 
 ## app.module.ts
 ```javascript
@@ -111,7 +111,11 @@ export class AppModule { }
 ```
 
 ## Step 3
-3rd: cd src/ && mkdir services validators contracts pipes components helpers && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
+```diff
++ unique compoents go featureComponents in green
+- share components go shareComponents in red
+```
+3rd: cd src/ && mkdir services validators contracts pipes featureComponents shareComponents helpers && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
 
 ## tslint.json
 ```javascript

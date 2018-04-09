@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<div class="column">
-		<app-input-output [haharRate]="todayRate" (updatedRateEmitter)="updateExchangeRate($event)">
+		<app-input-output [haharRate]="todayRate" (childToParentRateEmitter)="updateExchangeRate($event)">
 		</app-input-output>
 	</div>
 	<div class="column">

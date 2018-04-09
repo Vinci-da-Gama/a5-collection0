@@ -25,6 +25,7 @@ import { InitPageModule } from './init-page/init-page.module';
 import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
 import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/inputOutputMapChartRoundprocess.module';
 import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
+import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -56,7 +57,8 @@ import { CookieService } from 'ngx-cookie-service';
 		InitPageModule,
 		FormGroupPipeI18nTooltipPopoverModalModule,
 		InputOutputMapChartRoundprocessModule,
-		CoPCookieMomentSliderModule
+		CoPCookieMomentSliderModule,
+		ValPassEncapsuElemContentRefDirecModule
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },

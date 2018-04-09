@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 // import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CpcmssComponent } from '../../components/cpcmss/cpcmss.component';
+import { CpcmssComponent } from '../../featureComponents/cpcmss/cpcmss.component';
 
 const cpcmssRoute: Routes = [
 	{ path: 'slicer-clickoutpopover-moment', component: CpcmssComponent }

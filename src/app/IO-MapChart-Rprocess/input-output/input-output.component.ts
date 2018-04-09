@@ -7,15 +7,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class InputOutputComponent implements OnInit {
 
-	@Input() haharRate: Number = 0;
-	@Output() updatedRateEmitter = new EventEmitter<Number>();
+	// This is not error, it is suggestion only.
+	@Input('haharRate') childReceivedRate: Number = 0;
+	@Output('childToParentRateEmitter') updatedRateEmitter = new EventEmitter<Number>();
 
 	constructor() { }
 
 	ngOnInit() { }
 
 	resetRate() {
-		this.updatedRateEmitter.emit(this.haharRate);
+		this.updatedRateEmitter.emit(this.childReceivedRate);
 	}
 
 }

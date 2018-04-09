@@ -9,10 +9,10 @@ import { ExchangeRateComponent } from './exchange-rate-map/exchange-rate.compone
 import { SupplyRateComponent } from './pass-rate-by-route-parameter/supply-rate.component';
 import { AnguGoomapComponent } from './angu-goomap/angu-goomap.component';
 import { InputOutputComponent } from './input-output/input-output.component';
-import { HorizontalBarComponent } from '../../components/graph-charts/horizontal-bar/horizontal-bar.component';
-import { MixedChartComponent } from '../../components/graph-charts/mixed-chart/mixed-chart.component';
-import { RoundedProgressbarComponent } from '../../components/rounded-progressbar/rounded-progressbar.component';
-import { SemicirProgressComponent } from '../../components/semicircle-roundprogress/semicircle-roundprogress.component';
+import { HorizontalBarComponent } from '../../featureComponents/graph-charts/horizontal-bar/horizontal-bar.component';
+import { MixedChartComponent } from '../../featureComponents/graph-charts/mixed-chart/mixed-chart.component';
+import { RoundedProgressbarComponent } from '../../shareComponents/rounded-progressbar/rounded-progressbar.component';
+import { SemicirProgressComponent } from '../../shareComponents/semicircle-roundprogress/semicircle-roundprogress.component';
 
 @NgModule({
 	imports: [

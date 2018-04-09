@@ -8,7 +8,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { FormGroupComponent } from './form-group/form-group.component';
 import { ConfirmModalComponent } from '../../helpers/confirm-modal/confirm-modal.component';
 import { RatingComponent } from './rating/rating.component';
-import { TextMaskComponent } from '../../components/text-mask/text-mask.component';
+import { TextMaskComponent } from '../../shareComponents/text-mask/text-mask.component';
 import { FixNumberPipe } from '../../pipes/fix-number.pipe';
 
 
