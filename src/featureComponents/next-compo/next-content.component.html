@@ -1,0 +1,40 @@
+<p>
+	next-content works!
+</p>
+<div class="ui stackable four column grid">
+	<div class="column">
+		<p>
+			routerLinkActive is for Tab links
+			<br> routerLink can be mainAboutRouter, due to it is one of root routes.
+			<br> routerLink also could be ../mainAboutRouter, go up to localhost:4200/, then add mainAboutRouter as route.
+		</p>
+		<a routerLinkActive="active" [routerLink]="['../mainAboutRouter']">
+			Back To Parent Compo
+		</a>
+		<router-outlet></router-outlet>
+	</div>
+	<div class="column">
+		<sui-tabset>
+			<div class="ui top attached tabular menu">
+				<a class="item" suiTabHeader="1">Redirect To Home</a>
+				<a class="item" suiTabHeader="2">User with Router Parameter</a>
+				<a class="item" suiTabHeader="3">Third</a>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="1">
+				<button class="ui fluid inverted teal button" aria-label="label" (click)="goInitPage()">
+					Go Initial Page
+				</button>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="2">
+				<button class="ui fluid inverted teal button" aria-label="label" (click)="goUsersPage()">
+					Go Users Page
+				</button>
+			</div>
+			<div class="ui bottom attached segment" suiTabContent="3">Third tab!</div>
+		</sui-tabset>
+	</div>
+	<div class="column">
+	</div>
+	<div class="column">
+	</div>
+</div>

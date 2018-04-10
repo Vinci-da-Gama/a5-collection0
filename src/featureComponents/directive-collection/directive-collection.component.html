@@ -1,0 +1,28 @@
+<p [ngStyle]="setStyle()">
+	directive-collection works!
+</p>
+<p [ngClass]="{ className: isThisClass }">
+	This is ng Class.
+</p>
+<p *ngIf="isThisIf; else elseNgIf()">
+	ng-if ... else ...
+</p>
+<em appBasicDirective>
+	basic directive...
+</em>
+<br />
+<em appCustomHostDirective>
+	This is Custome Host Render2 Directive
+</em>
+<br />
+<br />
+<cite appDirWithPassDownVal [defColor]="'skyblue'" highlightedColor="red">
+	directive with pass down value...
+</cite>
+<br />
+<br />
+<div *appTmplViewcontentRef="isViewTemplate">
+	<p>
+		templateRef and viewContentRef -- see tmple according to viewcontentRef and TemplateRef in directive.
+	</p>
+</div>

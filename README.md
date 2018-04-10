@@ -115,7 +115,7 @@ export class AppModule { }
 + unique compoents go featureComponents in green
 - share components go shareComponents in red
 ```
-3rd: cd src/ && mkdir services validators contracts pipes featureComponents shareComponents helpers && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
+3rd: cd src/ && mkdir services validators contracts pipes featureComponents shareComponents helpers directives && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
 
 ## tslint.json
 ```javascript
