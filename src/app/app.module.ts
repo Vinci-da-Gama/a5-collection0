@@ -27,6 +27,7 @@ import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/in
 import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
 import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
 import { RouterRelatedModule } from './router-related/router-related.module';
+import { ObservableSubscriptionSubjectModule } from './observable-subscription-subject/observable-subscription-subject.module';
 import { NotFoundModule } from './not-found/not-found.module';
 
 import { CookieService } from 'ngx-cookie-service';
@@ -34,6 +35,7 @@ import { DoAuthService } from '../services/auth/do-auth.service';
 import { AuthGuardService } from '../services/auth/auth-guard.service';
 import { CanDeactivateService } from '../services/internal/can-deactivate.service';
 import { ChairResolveService } from '../services/chairs/chair-resolve.service';
+import { SubjectDataTransactionService } from '../services/internal/subject-data-transaction.service';
 
 @NgModule({
 	declarations: [
@@ -66,12 +68,14 @@ import { ChairResolveService } from '../services/chairs/chair-resolve.service';
 		CoPCookieMomentSliderModule,
 		ValPassEncapsuElemContentRefDirecModule,
 		RouterRelatedModule,
+		ObservableSubscriptionSubjectModule,
 		NotFoundModule
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },
 		CookieService, DoAuthService, AuthGuardService,
-		CanDeactivateService, ChairResolveService
+		CanDeactivateService, ChairResolveService,
+		SubjectDataTransactionService
 	],
 	bootstrap: [AppComponent]
 })
