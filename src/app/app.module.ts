@@ -27,8 +27,13 @@ import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/in
 import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
 import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
 import { RouterRelatedModule } from './router-related/router-related.module';
+import { NotFoundModule } from './not-found/not-found.module';
 
 import { CookieService } from 'ngx-cookie-service';
+import { DoAuthService } from '../services/auth/do-auth.service';
+import { AuthGuardService } from '../services/auth/auth-guard.service';
+import { CanDeactivateService } from '../services/internal/can-deactivate.service';
+import { ChairResolveService } from '../services/chairs/chair-resolve.service';
 
 @NgModule({
 	declarations: [
@@ -60,11 +65,13 @@ import { CookieService } from 'ngx-cookie-service';
 		InputOutputMapChartRoundprocessModule,
 		CoPCookieMomentSliderModule,
 		ValPassEncapsuElemContentRefDirecModule,
-		RouterRelatedModule
+		RouterRelatedModule,
+		NotFoundModule
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },
-		CookieService
+		CookieService, DoAuthService, AuthGuardService,
+		CanDeactivateService, ChairResolveService
 	],
 	bootstrap: [AppComponent]
 })

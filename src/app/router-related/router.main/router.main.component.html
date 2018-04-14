@@ -17,6 +17,15 @@
 		<router-outlet></router-outlet>
 	</div>
 	<div class="column">
+		Usually, if we give CanActivate guard to parent route, all child routes would be blocked. Thus, it is better us CanActivateChild,
+		block children, not parent.
+		<br />
+		<em class="fz2em">
+			Mention one thing --> Due to service donot have meta data (html, css, js), so if you want to inject it into Module or Component,
+			you should give @Injectable(). But, if you want to inject a service into another service, donot need Injectable.
+		</em>
+	</div>
+	<div class="column">
 	</div>
 	<div class="column">
 	</div>

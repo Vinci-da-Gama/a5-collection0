@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~nouislider/distribute/nouislider.min.css";
-
 .ui.modal {
     position: relative;
     left: 0;
     right: 0;
     margin: auto;
     margin-top: 12em !important;
+}
+
+.fz2em {
+    font-size: 2em;
+}
+
+.text-bold {
+    font-weight: bold;
 }

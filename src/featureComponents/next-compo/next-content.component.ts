@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TabModel } from '../../contracts/models/tabs-class';
 
+import { DoAuthService } from '../../services/auth/do-auth.service';
+
 @Component({
 	selector: 'app-nested-content',
 	templateUrl: './next-content.component.html',
@@ -26,7 +28,8 @@ export class NextContentComponent implements OnInit {
 
 	constructor(
 		private router: Router,
-		private aRoute: ActivatedRoute
+		private aRoute: ActivatedRoute,
+		private doAuthService: DoAuthService
 	) { }
 
 	ngOnInit() { }
@@ -40,6 +43,23 @@ export class NextContentComponent implements OnInit {
 
 	goUsersPage() {
 		this.router.navigate(['users']);
+	}
+
+	goEditFirstChair(id: number) {
+		this.router.navigate(['/chairs', id, 'edit'], {
+			queryParams: {
+				allowEdit: '0' // why is 0, because only id === 3, is allowed. Define it manully.
+			},
+			fragment: 'loading'
+		});
+	}
+
+	onLogin() {
+		this.doAuthService.doLoggedIn();
+	}
+
+	onLogout() {
+		this.doAuthService.doLoggedOut();
 	}
 
 }

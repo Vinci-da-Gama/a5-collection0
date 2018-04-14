@@ -39,7 +39,7 @@ npm-install.txt
 .editorconfig
 README.md
 
-2nd: ng g m share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts
+2nd: ng g m share-module && ng g c sidebar-outlet && cd ../../../ --> cp and paste share-module.module.ts and sidebar-outlet component, then adjust app.module.ts --> then cp and paste entire not-found module, then adjust app.module.ts
 
 ## app.module.ts
 ```javascript
@@ -68,6 +68,8 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { InitPageModule } from './init-page/init-page.module';
 import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
+// it have to be place at the end of all other modules, since other modules may have children routes.
+import { NotFoundModule } from './not-found/not-found.module';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -99,7 +101,8 @@ import { CookieService } from 'ngx-cookie-service';
 			}
 		),
 		InitPageModule,
-		FormGroupPipeI18nTooltipPopoverModalModule
+		FormGroupPipeI18nTooltipPopoverModalModule,
+		NotFoundModule
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },
@@ -114,8 +117,12 @@ export class AppModule { }
 ```diff
 + unique compoents go featureComponents in green
 - share components go shareComponents in red
++ external service only has auth and crud services/external/{auth | crud} in green
+- internal service only works for internal modules sync data or event in red
 ```
-3rd: cd src/ && mkdir services validators contracts pipes featureComponents shareComponents helpers directives && cd assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
+3rd: 
+-- cp and paste service auth and internal to new pj, then adjust app.module.ts
+-- cd src/ && mkdir services validators contracts pipes featureComponents shareComponents helpers directives && cd ./services/ && mkdir crud && cd ../assets/ && mkdir imgs logos && cd ../contracts/ && mkdir models interfaces && cd ../components && mkdir graph-charts
 
 ## tslint.json
 ```javascript

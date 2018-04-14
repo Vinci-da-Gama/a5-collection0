@@ -10,14 +10,39 @@ import { ChairsComponent } from '../../featureComponents/chairs/chairs.component
 import { ChairComponent } from '../../featureComponents/chair/chair.component';
 import { EditChairComponent } from '../../featureComponents/edit-chair/edit-chair.component';
 
+import { AuthGuardService } from '../../services/auth/auth-guard.service';
+import { CanDeactivateService } from '../../services/internal/can-deactivate.service';
+import { ChairResolveService } from '../../services/chairs/chair-resolve.service';
+
 const routerRelatedRoute: Routes = [
 	{ path: 'mainAboutRouter', component: RouterMainComponent },
 	{ path: 'next-compo', component: NextContentComponent },
 	{
-		path: 'users', component: UsersComponent, children: [
+		path: 'users',
+		canActivateChild: [AuthGuardService],
+		component: UsersComponent,
+		children: [
 			{ path: ':id/:name', component: UserComponent }
 		]
 	},
+	{
+		path: 'chairs',
+		/* usually donot block parent compo, u can block children compo */
+		/* canActivate: [AuthGuardService],  */
+		component: ChairsComponent,
+		children: [
+			{
+				path: ':id', component: ChairComponent,
+				resolve: {
+					theChair: ChairResolveService
+				}
+			},
+			{
+				path: ':id/edit', component: EditChairComponent,
+				canDeactivate: [CanDeactivateService]
+			}
+		]
+	}
 ];
 
 @NgModule({

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { User } from '../../contracts/models/user-class';
 
 @Component({
@@ -20,4 +22,13 @@ export class UsersComponent {
 			name: 'Chris'
 		}
 	];
+
+	constructor(
+		private router: Router,
+		private aRoute: ActivatedRoute
+	) { }
+
+	goParentRoute() {
+		this.router.navigate(['/next-compo'], { relativeTo: this.aRoute });
+	}
 }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FormReactiveformCommonModule } from '../share-module/form-reactiveform-common/form-reactiveform-common.module';
 import { SuiTabsModule } from 'ng2-semantic-ui';
 import { RouterRelatiedRouterModule } from './router-relatied.router.module';
 
@@ -11,9 +11,11 @@ import { ChairsComponent } from '../../featureComponents/chairs/chairs.component
 import { ChairComponent } from '../../featureComponents/chair/chair.component';
 import { EditChairComponent } from '../../featureComponents/edit-chair/edit-chair.component';
 
+import { ChairsService } from '../../services/chairs/chairs.service';
+
 @NgModule({
 	imports: [
-		CommonModule,
+		FormReactiveformCommonModule,
 		SuiTabsModule,
 		RouterRelatiedRouterModule
 	],
@@ -25,7 +27,9 @@ import { EditChairComponent } from '../../featureComponents/edit-chair/edit-chai
 		ChairsComponent,
 		ChairComponent,
 		EditChairComponent
-	]/* ,
+	],
+	providers: [ChairsService]
+	/* ,
 	exports: [RouterMainComponent] */
 })
 export class RouterRelatedModule { }

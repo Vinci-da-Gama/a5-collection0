@@ -11,16 +11,16 @@ export class UserComponent implements OnInit, OnDestroy {
 	user: User;
 	paramsSubscription: Subscription;
 
-	constructor(private route: ActivatedRoute) { }
+	constructor(private aRoute: ActivatedRoute) { }
 
 	ngOnInit() {
 		// snapshot for init
 		this.user = {
-			id: this.route.snapshot.params['id'],
-			name: this.route.snapshot.params['name']
+			id: this.aRoute.snapshot.params['id'],
+			name: this.aRoute.snapshot.params['name']
 		};
 		// subscribe for reload.
-		this.paramsSubscription = this.route.params
+		this.paramsSubscription = this.aRoute.params
 			.subscribe(
 				(params: Params) => {
 					this.user.id = params['id'];
