@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators, FormBuilder } from '@angular/forms';
 import { SuiModalService, ModalSize } from 'ng2-semantic-ui';
 
-import { FbAuthService } from '../../../services/fb-auth.service';
+import { FbAuthService } from '../../../services/auth/fb-auth.service';
 import { AnonymousFbUserClass } from '../../../contracts/models/anonymous-user-state';
 import { ConfirmModal } from '../../../helpers/confirm-modal/confirm-modal.component';
 
 @Component({
 	selector: 'app-form-group',
 	templateUrl: './form-group.component.html',
-	styleUrls: ['./form-group.component.scss'],
-	providers: [FbAuthService]
+	styleUrls: ['./form-group.component.scss']
 })
 export class FormGroupComponent implements OnInit {
 

@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OssRouteModule } from './oss-route.module';
-import { DirWithPassDownValDirective } from '../../directives/dirWithPassDownVals/dir-with-pass-down-val.directive';
+import { GlobalDirectiveModule } from '../share-module/global-directive/global-directive.module';
 
 import { OssMainComponent } from './oss-main/oss-main.component';
+import { ReceivedataFromSubjectserveComponent } from '../../featureComponents/receivedata-from-subjectserve/receivedata-from-subjectserve.component';
 
 
 @NgModule({
 	imports: [
 		CommonModule,
-		OssRouteModule
+		OssRouteModule,
+		GlobalDirectiveModule
 	],
 	declarations: [
-		DirWithPassDownValDirective,
-		OssMainComponent
+		OssMainComponent,
+		ReceivedataFromSubjectserveComponent
 	]
 })
 export class ObservableSubscriptionSubjectModule { }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TabModel } from '../../contracts/models/tabs-class';
 
-import { DoAuthService } from '../../services/auth/do-auth.service';
+import { FbAuthService } from '../../services/auth/fb-auth.service';
 
 @Component({
 	selector: 'app-nested-content',
@@ -29,7 +29,7 @@ export class NextContentComponent implements OnInit {
 	constructor(
 		private router: Router,
 		private aRoute: ActivatedRoute,
-		private doAuthService: DoAuthService
+		private fbAuthService: FbAuthService
 	) { }
 
 	ngOnInit() { }
@@ -55,11 +55,12 @@ export class NextContentComponent implements OnInit {
 	}
 
 	onLogin() {
-		this.doAuthService.doLoggedIn();
+		this.fbAuthService.signOut();
+		this.router.navigate(['/authForm']);
 	}
 
 	onLogout() {
-		this.doAuthService.doLoggedOut();
+		this.fbAuthService.signOut();
 	}
 
 }

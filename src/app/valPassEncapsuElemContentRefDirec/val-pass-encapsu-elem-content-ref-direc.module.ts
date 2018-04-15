@@ -14,7 +14,6 @@ import { BasicDirectiveDirective } from '../../directives/basic-directive.direct
 import { CustomHostDirectiveDirective } from '../../directives/customer-host-directive/custom-host-directive.directive';
 import { TmplViewcontentRefDirective } from '../../directives/tmplViewContentRef/tmpl-viewcontent-ref.directive';
 import { DirCtrlClassDirective } from '../../directives/dir-ctrl-class/dir-ctrl-class.directive';
-// import { DirWithPassDownValDirective } from '../../directives/dirWithPassDownVals/dir-with-pass-down-val.directive';
 
 @NgModule({
 	imports: [
@@ -32,8 +31,7 @@ import { DirCtrlClassDirective } from '../../directives/dir-ctrl-class/dir-ctrl-
 		BasicDirectiveDirective,
 		CustomHostDirectiveDirective,
 		TmplViewcontentRefDirective,
-		DirCtrlClassDirective/* ,
-		DirWithPassDownValDirective */
+		DirCtrlClassDirective
 	]/* ,
 	exports: [IoeeEcapsuViewChildLocalElemRefComponent] */
 })

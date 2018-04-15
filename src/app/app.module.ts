@@ -31,7 +31,7 @@ import { ObservableSubscriptionSubjectModule } from './observable-subscription-s
 import { NotFoundModule } from './not-found/not-found.module';
 
 import { CookieService } from 'ngx-cookie-service';
-import { DoAuthService } from '../services/auth/do-auth.service';
+import { FbAuthService } from '../services/auth/fb-auth.service';
 import { AuthGuardService } from '../services/auth/auth-guard.service';
 import { CanDeactivateService } from '../services/internal/can-deactivate.service';
 import { ChairResolveService } from '../services/chairs/chair-resolve.service';
@@ -42,7 +42,7 @@ import { SubjectDataTransactionService } from '../services/internal/subject-data
 		AppComponent
 	],
 	imports: [
-		BrowserModule,
+		BrowserModule.withServerTransition({ appId: 'anytextasid-you-like' }),
 		HttpClientModule,
 		/* ReactiveFormsModule,
 		FormsModule, */
@@ -73,7 +73,7 @@ import { SubjectDataTransactionService } from '../services/internal/subject-data
 	],
 	providers: [
 		{ provide: APP_BASE_HREF, useValue: '/' },
-		CookieService, DoAuthService, AuthGuardService,
+		CookieService, FbAuthService, AuthGuardService,
 		CanDeactivateService, ChairResolveService,
 		SubjectDataTransactionService
 	],

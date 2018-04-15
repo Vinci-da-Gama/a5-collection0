@@ -30,6 +30,10 @@ Scaffold  | Usage
 
 ### donot need spec ng g c compoName --spac false
 
+## These 3 are for universal-rendering
+npm i -S @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader
+check here --> [Universal-Rendering](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
+
 ## After you init pj -- Step 1 N 2
 1st: npm init -y to create package.json, then modified it according to __package-sample.json. goes into src/app folder --> cd src/app/ && touch app-routing.module.ts operators.ts && cd ../../ 
 --> add app-routing.module.ts, and cp and paste content, then add operators.ts and cp and paste content, last one is compare tsconfig.json --> .gitignore at bottom add these 3

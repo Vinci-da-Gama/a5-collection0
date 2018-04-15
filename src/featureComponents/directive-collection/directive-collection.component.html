@@ -1,12 +1,12 @@
 <p>
 	For global usage about module, component, directive and pipe...
 	<br>
-	<!-- @NgModule({
-		declarations: [CoolComponent, CoolDirective, CoolPipe],
-		imports: [MySharedModule1, MySharedModule2],
-		exports: [MySharedModule1, MySharedModule2, CoolComponent, CoolDirective, CoolPipe],
-		})
-		export class AllInOneModule {} -->
+	&#64;NgModule(&#123;<br>
+		declarations: [sthComponent, sthDirective, sthPipe],<br>
+		imports: [sthModule1, sthModule2],<br>
+		exports: [sthModule1, sthModule2, sthComponent, sthDirective, sthPipe]
+		&#125;)<br>
+		export class AllInOneModule &#123;&#125;
 </p>
 
 <p [ngStyle]="setStyle()">

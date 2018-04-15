@@ -5,13 +5,13 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
-import { DoAuthService } from './do-auth.service';
+import { FbAuthService } from './fb-auth.service';
 
 @Injectable()
 export class AuthGuardService implements CanActivate, CanActivateChild {
 
 	constructor(
-		private doAuthService: DoAuthService,
+		private fbAuthService: FbAuthService,
 		private router: Router
 	) { }
 
@@ -19,7 +19,7 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
 		routeSnap: ActivatedRouteSnapshot,
 		stateSnap: RouterStateSnapshot
 	): Observable<boolean> | Promise<boolean> | boolean {
-		return this.doAuthService.isAuthenticated()
+		return this.fbAuthService.isAuthenticated()
 			.then(
 				(authen: boolean) => {
 					console.log('25: if login is false, redirect to home page.', authen);
