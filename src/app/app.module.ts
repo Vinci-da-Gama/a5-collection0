@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
+import { NgModule, PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { APP_BASE_HREF, isPlatformBrowser } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 // import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -12,7 +12,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 // END firebase
 
-import { SharedModule } from './share-module/share-module.module';
+import { CoreModule } from './core/core-module.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SuiModule } from 'ng2-semantic-ui';
 import { NgxSpinnerModule } from 'ngx-spinner';
@@ -37,6 +37,7 @@ import { CanDeactivateService } from '../services/internal/can-deactivate.servic
 import { ChairResolveService } from '../services/chairs/chair-resolve.service';
 import { SubjectDataTransactionService } from '../services/internal/subject-data-transaction.service';
 
+
 @NgModule({
 	declarations: [
 		AppComponent
@@ -50,7 +51,7 @@ import { SubjectDataTransactionService } from '../services/internal/subject-data
 		AngularFirestoreModule,
 		AngularFireAuthModule,
 		AngularFireDatabaseModule,
-		SharedModule,
+		CoreModule,
 		AppRoutingModule,
 		SuiModule,
 		NgxSpinnerModule,
@@ -79,4 +80,12 @@ import { SubjectDataTransactionService } from '../services/internal/subject-data
 	],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+	constructor(
+		@Inject(PLATFORM_ID) private platformId: Object,
+		@Inject(APP_ID) private appId: string) {
+		const platform = isPlatformBrowser(platformId) ?
+			'in the browser' : 'on the server';
+		console.log(`Running ${platform} with appId=${appId}`);
+	}
+}

@@ -6,7 +6,7 @@
 	"apps": [
 		{
 			"root": "src",
-			"outDir": "dist/local",
+			"outDir": "dist/browser",
 			"assets": [
 				"assets",
 				"favicon.ico"
@@ -20,6 +20,7 @@
 			"prefix": "app",
 			"styles": [
 				"../semantic/dist/semantic.min.css",
+				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
 				"styles.scss"
 			],
 			"scripts": [
@@ -50,9 +51,12 @@
 			"prefix": "app",
 			"styles": [
 				"../semantic/dist/semantic.min.css",
-				"styles.css"
+				"../node_modules/bootstrap/dist/css/bootstrap.min.css",
+				"styles.scss"
 			],
-			"scripts": [],
+			"scripts": [
+				"../node_modules/moment/min/moment.min.js"
+			],
 			"environmentSource": "environments/environment.ts",
 			"environments": {
 				"dev": "environments/environment.ts",

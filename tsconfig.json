@@ -17,5 +17,11 @@
 			"es2017",
 			"dom"
 		]
-	}
+	},
+	"exclude": [
+		// for webpack compile to avoid adding test files.
+		"test.ts",
+		"**/*.spec.ts",
+		"**/*.e2e-spec.ts"
+	]
 }

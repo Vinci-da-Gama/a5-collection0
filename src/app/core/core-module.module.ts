@@ -10,4 +10,4 @@ import { SidebarOutletComponent } from './sidebar-outlet/sidebar-outlet.componen
 	declarations: [SidebarOutletComponent],
 	exports: [SidebarOutletComponent, CommonModule, RouterModule]
 })
-export class SharedModule { }
+export class CoreModule { }

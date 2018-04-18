@@ -33,6 +33,7 @@ Scaffold  | Usage
 ## These 3 are for universal-rendering
 npm i -S @angular/platform-server @nguniversal/module-map-ngfactory-loader ts-loader
 check here --> [Universal-Rendering](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
+cp and paste these to new angular-cli pj. tsconfig.json universal.rendering.server.ts webpack.server.config.js tsconfig.server.json main.server.ts app.server.module.ts --> cp 2nd obj in apps of .angular-cli.json and paste to new .angular-cli.json and modified styles and scripts
 
 ## After you init pj -- Step 1 N 2
 1st: npm init -y to create package.json, then modified it according to __package-sample.json. goes into src/app folder --> cd src/app/ && touch app-routing.module.ts operators.ts && cd ../../ 
