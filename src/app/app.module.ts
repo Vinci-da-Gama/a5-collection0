@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, PLATFORM_ID, APP_ID, Inject } from '@angular/core';
-import { APP_BASE_HREF, isPlatformBrowser } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 // import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -27,15 +26,8 @@ import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/in
 import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
 import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
 import { RouterRelatedModule } from './router-related/router-related.module';
-import { ObservableSubscriptionSubjectModule } from './observable-subscription-subject/observable-subscription-subject.module';
+import { ObservableSubscriptionSubjectModule } from './observable-subscription-subject-animation/observable-subscription-subject.module';
 import { NotFoundModule } from './not-found/not-found.module';
-
-import { CookieService } from 'ngx-cookie-service';
-import { FbAuthService } from '../services/auth/fb-auth.service';
-import { AuthGuardService } from '../services/auth/auth-guard.service';
-import { CanDeactivateService } from '../services/internal/can-deactivate.service';
-import { ChairResolveService } from '../services/chairs/chair-resolve.service';
-import { SubjectDataTransactionService } from '../services/internal/subject-data-transaction.service';
 
 
 @NgModule({
@@ -72,20 +64,6 @@ import { SubjectDataTransactionService } from '../services/internal/subject-data
 		ObservableSubscriptionSubjectModule,
 		NotFoundModule
 	],
-	providers: [
-		{ provide: APP_BASE_HREF, useValue: '/' },
-		CookieService, FbAuthService, AuthGuardService,
-		CanDeactivateService, ChairResolveService,
-		SubjectDataTransactionService
-	],
 	bootstrap: [AppComponent]
 })
-export class AppModule {
-	constructor(
-		@Inject(PLATFORM_ID) private platformId: Object,
-		@Inject(APP_ID) private appId: string) {
-		const platform = isPlatformBrowser(platformId) ?
-			'in the browser' : 'on the server';
-		console.log(`Running ${platform} with appId=${appId}`);
-	}
-}
+export class AppModule { }

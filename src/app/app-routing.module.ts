@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 const rootRoute: Routes = [
 	/* define app module routes here, e.g., to lazily load a module
@@ -15,7 +15,8 @@ const rootRoute: Routes = [
 @NgModule({
 	imports: [
 		RouterModule.forRoot(rootRoute, {
-			useHash: true
+			useHash: true,
+			preloadingStrategy: PreloadAllModules
 		})
 	],
 	exports: [RouterModule]

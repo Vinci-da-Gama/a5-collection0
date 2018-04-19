@@ -1,20 +1,101 @@
-<div class="ui basic segment">
-    <!--The whole content below can be removed with the new code.-->
-    <div style="text-align:center">
-        <h3>Welcome to</h3>
-        <img width="160" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo="
-        />
-    </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-        <li>
-            <h3><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h3>
-        </li>
-        <li>
-            <h3><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h3>
-        </li>
-        <li>
-            <h3><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h3>
-        </li>
-    </ul>
+<div class="ui stackable two column grid">
+	<div class="column">
+		<div class="ui basic segment">
+			<!--The whole content below can be removed with the new code.-->
+			<div style="text-align:center">
+				<h3>{{welcome}}</h3>
+				<img width="160" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo="
+				/>
+			</div>
+			<h2>Here are some links to help you start: </h2>
+			<ul>
+				<li>
+					<h3>
+						<a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a>
+					</h3>
+				</li>
+				<li>
+					<h3>
+						<a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+					</h3>
+				</li>
+				<li>
+					<h3>
+						<a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a>
+					</h3>
+				</li>
+			</ul>
+
+			<div class="container">
+				<ul>
+					<li>
+						To build aot in angular-cli is quite easy -- cmd: ng build --prod --aot
+					</li>
+					<li>
+						have unit-test sample -- in init-page-content.component.html
+					</li>
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="column">
+		uppercase must just follow the string, it is for string only.
+		<div class="ui message">
+			<div class="header">
+				pipe with 2 arguments
+			</div>
+			<p>
+				String --> if length >= 5, then only select first 3 letters. --> so &#39;welcome to&#39; will return wel.
+			</p>
+			<p>
+				{{welcome | shorten:5:3}}
+			</p>
+		</div>
+		<div class="ui icon message">
+			<i class="notched circle loading icon"></i>
+			<div class="content">
+				<div class="header">
+					Filter Pipe and Async Pipe
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="ui divider hidden"></div>
+							<input type="text" class="form-control" [(ngModel)]="filteredStatus" placeholder="match status..." />
+							<div class="ui divider hidden"></div>
+							<button class="btn btn-primary" (click)="onAddServer()">
+								Add Server
+							</button>
+							<br>
+							<h2>App Status: {{ appStatus | async }}</h2>
+							<p>
+								build-in async pipe will help us fetch data from callback response.
+							</p>
+							<hr>
+							<p>
+								match inputString(filteredStatus) with array status, then display items share same status -- status have (stable and offline).
+								--- use pure: false in @pipe to triggering reload data in page, but usually donot do it, filter should response to
+								text input or action, not data reload. However, if you want, add pure: false to @pipe, it will cause a little performace
+								issue.
+							</p>
+							<ul class="list-group">
+								<li class="list-group-item" *ngFor="let server of servers | filterArray:filteredStatus:'status'" [ngClass]="getStatusClasses(server)">
+									<strong>{{ server.name | shorten:15 }}</strong> | {{ server.instanceType | uppercase }} | {{ server.started | date:'fullDate'
+									| uppercase }}
+									<a class="ui blue tag label">
+										{{ server.status }}
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="column"></div>
+	<div class="column"></div>
 </div>

@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent } from './IOEventEmitEncapsuLocal-ElemRefViewChild.compo';
+import { IoeeEcapsuViewChildLocalElemRefComponent } from './IOEventEmitEncapsuLocal-ElemRefViewChild.compo';
 
-describe('InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent', () => {
-	let component: InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent;
-	let fixture: ComponentFixture<InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent>;
+describe('IoeeEcapsuViewChildLocalElemRefComponent', () => {
+	let component: IoeeEcapsuViewChildLocalElemRefComponent;
+	let fixture: ComponentFixture<IoeeEcapsuViewChildLocalElemRefComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent]
-		})
-			.compileComponents();
+			declarations: [IoeeEcapsuViewChildLocalElemRefComponent]
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(InputOutputEventEmitEcapsuLocalRefViewChildElementRefComponent);
+		fixture = TestBed.createComponent(IoeeEcapsuViewChildLocalElemRefComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

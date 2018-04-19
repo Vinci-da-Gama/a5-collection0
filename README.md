@@ -28,6 +28,9 @@ Scaffold  | Usage
 [Enum](https://github.com/angular/angular-cli/wiki/generate-enum)           | `ng g enum my-new-enum`
 [Module](https://github.com/angular/angular-cli/wiki/generate-module)       | `ng g module my-module`
 
+## how to solve problem: More than one module matches.
+ng g c new-component --module app
+
 ### donot need spec ng g c compoName --spac false
 
 ## These 3 are for universal-rendering

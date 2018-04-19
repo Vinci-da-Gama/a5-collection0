@@ -28,7 +28,9 @@ import { ChairsService } from '../../services/chairs/chairs.service';
 		ChairComponent,
 		EditChairComponent
 	],
-	providers: [ChairsService]
+	providers: [
+		ChairsService
+	]
 	/* ,
 	exports: [RouterMainComponent] */
 })

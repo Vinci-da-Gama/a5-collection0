@@ -7,10 +7,10 @@ describe('InitPageContentComponent', () => {
 	let fixture: ComponentFixture<InitPageContentComponent>;
 
 	beforeEach(async(() => {
+		// if in webpack, no need .compileComponents(), wpk will do it foryou. in angular-cli, you should use .compileComponent()
 		TestBed.configureTestingModule({
 			declarations: [InitPageContentComponent]
-		})
-			.compileComponents();
+		}).compileComponents();
 	}));
 
 	beforeEach(() => {
@@ -22,4 +22,9 @@ describe('InitPageContentComponent', () => {
 	it('should be created', () => {
 		expect(component).toBeTruthy();
 	});
+
+	it('expected text should be welcome to', () => {
+		expect(component.welcome).toEqual('Welcome to');
+	});
+
 });

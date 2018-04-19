@@ -5,6 +5,7 @@ import { GlobalDirectiveModule } from '../share-module/global-directive/global-d
 
 import { OssMainComponent } from './oss-main/oss-main.component';
 import { ReceivedataFromSubjectserveComponent } from '../../featureComponents/receivedata-from-subjectserve/receivedata-from-subjectserve.component';
+import { AnimateCollectionComponent } from '../../featureComponents/animation-collection/animate-collection.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReceivedataFromSubjectserveComponent } from '../../featureComponents/re
 	],
 	declarations: [
 		OssMainComponent,
-		ReceivedataFromSubjectserveComponent
+		ReceivedataFromSubjectserveComponent,
+		AnimateCollectionComponent
 	]
 })
 export class ObservableSubscriptionSubjectModule { }
