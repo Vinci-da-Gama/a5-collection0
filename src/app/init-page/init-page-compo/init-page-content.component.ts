@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpEvent, HttpEventType } from '@angular/common/http';
+import { CrudService } from '../../../services/crud.service';
 
 @Component({
 	selector: 'app-init-page-content',
@@ -12,6 +14,8 @@ export class InitPageContentComponent implements OnInit {
 			resolve('affter 2 second -- status is online.');
 		}, 2000);
 	});
+
+	receiveData = {};
 
 	welcome: String = 'Welcome to';
 	filteredStatus: String | string = '';
@@ -42,9 +46,21 @@ export class InitPageContentComponent implements OnInit {
 		}
 	];
 
-	constructor() { }
+	constructor(
+		private curdService: CrudService
+	) { }
 
-	ngOnInit() { }
+	ngOnInit() {
+		this.curdService.getMenu()
+			.subscribe((data) => {
+				this.receiveData = data['menu'];
+				console.log('57 -- ', this.receiveData);
+			});
+		this.curdService.getForEvent()
+			.subscribe((data: HttpEvent<Object>) => {
+				console.log(data.type === HttpEventType.Sent);
+			});
+	}
 
 	getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date }) {
 		return {

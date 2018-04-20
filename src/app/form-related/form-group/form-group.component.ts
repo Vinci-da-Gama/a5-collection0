@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators, FormBuilder } from '@angular/forms';
 import { SuiModalService, ModalSize } from 'ng2-semantic-ui';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { FbAuthService } from '../../../services/auth/fb-auth.service';
 import { AnonymousFbUserClass } from '../../../contracts/models/anonymous-user-state';
 import { ConfirmModal } from '../../../helpers/confirm-modal/confirm-modal.component';
+import { CrudService } from '../../../services/crud.service';
+import { InterceptorService } from '../../../services/interceptor.service';
 
 @Component({
 	selector: 'app-form-group',
 	templateUrl: './form-group.component.html',
-	styleUrls: ['./form-group.component.scss']
+	styleUrls: ['./form-group.component.scss'],
+	providers: [
+		CrudService,
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: InterceptorService,
+			multi: true
+		}
+	]
 })
 export class FormGroupComponent implements OnInit {
 
@@ -30,14 +41,22 @@ export class FormGroupComponent implements OnInit {
 
 	myNumber: Number = 3.14159275758;
 	now = Date.now();
+	receiveData = {};
 
 	constructor(
 		private afAuthService: FbAuthService,
 		private _fb: FormBuilder,
-		private modalService: SuiModalService
+		private modalService: SuiModalService,
+		private curdService: CrudService
 	) {
 		// this.checkAnonymous();
 		// this.checkFbStorage();
+
+		this.curdService.getForHttpRequestNProgress()
+			.subscribe((data) => {
+				this.receiveData = data;
+				console.log('58 This will trigger Interceptor -- ', this.receiveData);
+			});
 	}
 
 	ngOnInit() {
@@ -61,7 +80,7 @@ export class FormGroupComponent implements OnInit {
 						res.metadata.creationTime,
 						res.metadata.lastSignInTime
 					);
-					console.log('59 -- anonymous user state: ', this.anonymousUser);
+					console.log('82 -- anonymous user state: ', this.anonymousUser);
 					this.afAuthService.signOut();
 					this.isLoading = false;
 				} else {
@@ -80,7 +99,7 @@ export class FormGroupComponent implements OnInit {
 	private checkFbStorage() {
 		this.afAuthService.checkFbStore()
 			.subscribe((res) => {
-				console.log('76 -- res', res);
+				console.log('101 -- res', res);
 			});
 	}
 
@@ -120,25 +139,25 @@ export class FormGroupComponent implements OnInit {
 		if (isSignupForm) {
 			this.afAuthService.registerUser(fVal.suemail, fVal.supassword)
 				.then((res) => {
-					console.log('120 -- ', res);
+					console.log('130 -- ', res);
 					this.signupForm.reset();
 					this.isLoading = false;
 					this.handleModal(isSignupForm);
 				})
 				.catch((err) => {
-					console.log('125 -- ', err);
+					console.log('136 -- ', err);
 					this.isLoading = false;
 				});
 		} else {
 			this.afAuthService.signinUser(fVal.siemail, fVal.sipassword)
 				.then((res) => {
-					console.log('131 -- ', res);
+					console.log('142 -- ', res);
 					this.signinForm.reset();
 					this.isLoading = false;
 					this.handleModal(isSignupForm);
 				})
 				.catch((err) => {
-					console.log('145 -- ', err);
+					console.log('148 -- ', err);
 					this.isLoading = false;
 				});
 		}

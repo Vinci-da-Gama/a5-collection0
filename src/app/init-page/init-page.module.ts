@@ -7,6 +7,8 @@ import { ShortenPipe } from '../../pipes/shorten.pipe';
 import { FilterArrayPipe } from '../../pipes/filter-array.pipe';
 import { InitPageContentComponent } from './init-page-compo/init-page-content.component';
 
+import { CrudService } from '../../services/crud.service';
+
 @NgModule({
 	imports: [
 		CommonModule,
@@ -19,6 +21,11 @@ import { InitPageContentComponent } from './init-page-compo/init-page-content.co
 		ShortenPipe,
 		FilterArrayPipe
 	],
-	exports: [InitPageContentComponent]
+	providers: [
+		CrudService
+	],
+	exports: [
+		InitPageContentComponent
+	]
 })
 export class InitPageModule { }

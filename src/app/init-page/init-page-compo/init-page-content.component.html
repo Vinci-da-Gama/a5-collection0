@@ -1,4 +1,4 @@
-<div class="ui stackable two column grid">
+<div class="ui stackable three column grid">
 	<div class="column">
 		<div class="ui basic segment">
 			<!--The whole content below can be removed with the new code.-->
@@ -96,6 +96,22 @@
 			</div>
 		</div>
 	</div>
-	<div class="column"></div>
+	<div class="column">
+		<em class="fz2em">
+			httpClient -- progress
+		</em>
+		<br /> 2nd argument for httpClient is http header config
+		<br /> &#123; observe: 'response', 'body', 'events', responseType: 'json' &#125; observe has response, body -- responseType has
+		json, blob, text, and arraybuffer
+		<p>
+			when observe: 'events', it returns 2 objects. 1st is action type, 2nd is data. check action type go response.type and HttpEventType.Send(...)
+		</p>
+		<p style="font-size: 16px;">
+			Interceptor is service, and it belongs to HTTP_INTERCEPTORS -- useClass --> to accept multi provide, add multi: true. -->
+			Interceptor will affect all http or httpCli request. We add Crud service to interceptor service file to define which one
+			we want to response and you also have to inject the interceptor to specific component, otherwise, it will response to
+			all httpCli request. And To trigger interceptor, you must write your httpCli to HttpRequest.
+		</p>
+	</div>
 	<div class="column"></div>
 </div>

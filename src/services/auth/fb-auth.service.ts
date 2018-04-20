@@ -13,7 +13,7 @@ export class FbAuthService {
 
 	private anonymousUserState: Observable<firebase.User>;
 	public fbStoreItems: Observable<any[]>;
-	public fbToken: String | string = '';
+	public fbToken = '';
 
 	constructor(
 		private httpCli: HttpClient,
@@ -48,7 +48,7 @@ export class FbAuthService {
 				return this.getFbToken();
 			})
 			.catch((err) => {
-				console.log('50 -- sign up error: ', err);
+				console.log('51 -- sign up error: ', err);
 			});
 	}
 
@@ -58,13 +58,20 @@ export class FbAuthService {
 	}
 
 	public getFbToken() {
-		this.afAuth.auth.currentUser.getIdToken()
-			.then(
-				(token: string) => {
-					this.fbToken = token;
-				}
-			);
-		return this.fbToken;
+		if (this.afAuth.auth.currentUser) {
+			this.afAuth.auth.currentUser.getIdToken()
+				.then(
+					(token: string) => {
+						this.fbToken = token;
+					}
+				)
+				.catch(() => {
+					console.log('69 -- no login, so no token.');
+				});
+			return this.fbToken;
+		} else {
+			return 'No Token';
+		}
 	}
 
 	isAuthenticated() {
