@@ -27,7 +27,7 @@
 				</div>
 				<div class="extra content">
 					<div class="ui two buttons">
-						<a [routerLink]="['/support-rate', todayRate]">
+						<a [routerLink]="['/map-exchangeRage/support-rate', todayRate]">
 							<div class="ui basic green button">
 								Adjust (route_poarams)
 							</div>
@@ -35,6 +35,9 @@
 						<!-- <button class="ui violet button">
 							Pass by @Input()
 						</button> -->
+					</div>
+					<div>
+						<router-outlet></router-outlet>
 					</div>
 				</div>
 			</div>

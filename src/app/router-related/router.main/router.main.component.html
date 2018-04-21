@@ -2,7 +2,7 @@
 	RouteParams QueryParams Fragment ConvertNum ChildRoute QueryHandling WildCard NoFound(err)Page RouteGuard-CanDeactivate-CanActive-CanLoad
 	Redirect ResolveDynamicData RouteGuard(service and child) LocalStrategy
 </p>
-<div class="ui stackable four column grid">
+<div class="ui stackable two column grid">
 	<div class="column">
 		<p>
 			when component is main compo of a module, donot need router-outlet, but if it is a compo inject into another compo, then
@@ -11,11 +11,16 @@
 			next compo), add &lt;a [routerLink]="['/next-compo']"&gt; on top of it.
 		</p>
 		<!-- <app-nested-content></app-nested-content> -->
-		<a [routerLink]="['/next-compo']">
+		<a [routerLink]="['/mainAboutRouter/next-compo']">
 			Go Next Component
 		</a>
+	</div>
+
+	<div class="column">
 		<router-outlet></router-outlet>
 	</div>
+</div>
+<div class="ui stackable four column grid">
 	<div class="column">
 		Usually, if we give CanActivate guard to parent route, all child routes would be blocked. Thus, it is better us CanActivateChild,
 		block children, not parent.

@@ -1,26 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormArray, Validators, FormBuilder } from '@angular/forms';
+import { HttpEvent, HttpEventType } from '@angular/common/http';
 import { SuiModalService, ModalSize } from 'ng2-semantic-ui';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { FbAuthService } from '../../../services/auth/fb-auth.service';
 import { AnonymousFbUserClass } from '../../../contracts/models/anonymous-user-state';
 import { ConfirmModal } from '../../../helpers/confirm-modal/confirm-modal.component';
 import { CrudService } from '../../../services/crud.service';
-import { InterceptorService } from '../../../services/interceptor.service';
 
 @Component({
 	selector: 'app-form-group',
 	templateUrl: './form-group.component.html',
-	styleUrls: ['./form-group.component.scss'],
-	providers: [
-		CrudService,
-		{
-			provide: HTTP_INTERCEPTORS,
-			useClass: InterceptorService,
-			multi: true
-		}
-	]
+	styleUrls: ['./form-group.component.scss']
 })
 export class FormGroupComponent implements OnInit {
 
@@ -51,12 +42,6 @@ export class FormGroupComponent implements OnInit {
 	) {
 		// this.checkAnonymous();
 		// this.checkFbStorage();
-
-		this.curdService.getForHttpRequestNProgress()
-			.subscribe((data) => {
-				this.receiveData = data;
-				console.log('58 This will trigger Interceptor -- ', this.receiveData);
-			});
 	}
 
 	ngOnInit() {
@@ -64,6 +49,22 @@ export class FormGroupComponent implements OnInit {
 		this.createSignupFormGroup();
 		this.createSinginFormControl();
 		this.createSigninFormGroup();
+
+		this.curdService.getMenu()
+			.subscribe((data) => {
+				this.receiveData = data['menu'];
+				console.log('57 -- ', this.receiveData);
+			});
+		this.curdService.getForEvent()
+			.subscribe((data: HttpEvent<Object>) => {
+				console.log(data.type === HttpEventType.Sent);
+			});
+
+		this.curdService.getForHttpRequestNProgress()
+			.subscribe((data) => {
+				this.receiveData = data;
+				console.log('58 This will trigger Interceptor -- ', this.receiveData);
+			});
 	}
 
 	private checkAnonymous() {

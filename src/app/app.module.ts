@@ -21,12 +21,13 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 // import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { InitPageModule } from './init-page/init-page.module';
-import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
-import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/inputOutputMapChartRoundprocess.module';
-import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
-import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
-import { RouterRelatedModule } from './router-related/router-related.module';
-import { ObservableSubscriptionSubjectModule } from './observable-subscription-subject-animation/observable-subscription-subject.module';
+// import { FormGroupPipeI18nTooltipPopoverModalModule } from './form-related/formGroupPipeI18nTooltipPopoverModal.module';
+// import { InputOutputMapChartRoundprocessModule } from './IO-MapChart-Rprocess/inputOutputMapChartRoundprocess.module';
+// import { CoPCookieMomentSliderModule } from './clickoutPopoverCookieMomentStartSlider/copopoverCkmoSs.module';
+// import { ValPassEncapsuElemContentRefDirecModule } from './valPassEncapsuElemContentRefDirec/val-pass-encapsu-elem-content-ref-direc.module';
+// import { RouterRelatedModule } from './router-related/router-related.module';
+// import { ObservableSubscriptionSubjectModule } from './observable-subscription-subject-animation/observable-subscription-subject.module';
+// import { CanLazyloadEnvPathFormMoreBackendErrorhandlModule } from './lazyLoad-canload-envPathSetup-formMore-HttpXhrBackend-Errorhandler/lcefhe.module';
 import { NotFoundModule } from './not-found/not-found.module';
 
 
@@ -56,12 +57,13 @@ import { NotFoundModule } from './not-found/not-found.module';
 			}
 		), */
 		InitPageModule,
-		FormGroupPipeI18nTooltipPopoverModalModule,
+		/* FormGroupPipeI18nTooltipPopoverModalModule,
 		InputOutputMapChartRoundprocessModule,
 		CoPCookieMomentSliderModule,
 		ValPassEncapsuElemContentRefDirecModule,
 		RouterRelatedModule,
 		ObservableSubscriptionSubjectModule,
+		CanLazyloadEnvPathFormMoreBackendErrorhandlModule, */
 		NotFoundModule
 	],
 	bootstrap: [AppComponent]

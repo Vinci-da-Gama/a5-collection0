@@ -1,7 +1,7 @@
 <p>
 	next-content works!
 </p>
-<div class="ui stackable three column grid">
+<div class="ui stackable one column grid">
 	<div class="column">
 		<p>
 			routerLinkActive is for Tab links
@@ -11,7 +11,7 @@
 		<p class="fz2em">
 			In short, router-outlet is help to replace the position where it should be &lt;app-compo&gt;.
 		</p>
-		<a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['../mainAboutRouter']">
+		<a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="['/mainAboutRouter']">
 			Back To Parent Compo
 		</a>
 		<router-outlet></router-outlet>

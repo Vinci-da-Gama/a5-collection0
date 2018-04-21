@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IoeeEcapsuViewChildLocalElemRefComponent } from './In-outputEventEmitEncapsuLocalRefViewChildElementRef/IOEventEmitEncapsuLocal-ElemRefViewChild.compo';
 
 const veedRoute: Routes = [
-	{ path: 'valpass-contentelemRef-dir-encapsu', component: IoeeEcapsuViewChildLocalElemRefComponent }
+	{ path: '', component: IoeeEcapsuViewChildLocalElemRefComponent }
 ];
 
 @NgModule({

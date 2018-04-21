@@ -10,7 +10,7 @@ export class LoginInterceptorService implements HttpInterceptor {
 
 	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 		return next.handle(req).do((event: HttpEvent<any>) => {
-			console.log('13 -- Event: ', event);
+			console.log('13 logging interceptor -- Event: ', event);
 		});
 	}
 

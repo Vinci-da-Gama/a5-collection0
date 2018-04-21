@@ -98,7 +98,7 @@
 	</div>
 	<div class="column">
 		<em class="fz2em">
-			httpClient -- progress
+			httpClient -- progress and interceptor
 		</em>
 		<br /> 2nd argument for httpClient is http header config
 		<br /> &#123; observe: 'response', 'body', 'events', responseType: 'json' &#125; observe has response, body -- responseType has
@@ -107,10 +107,21 @@
 			when observe: 'events', it returns 2 objects. 1st is action type, 2nd is data. check action type go response.type and HttpEventType.Send(...)
 		</p>
 		<p style="font-size: 16px;">
-			Interceptor is service, and it belongs to HTTP_INTERCEPTORS -- useClass --> to accept multi provide, add multi: true. -->
-			Interceptor will affect all http or httpCli request. We add Crud service to interceptor service file to define which one
-			we want to response and you also have to inject the interceptor to specific component, otherwise, it will response to
-			all httpCli request. And To trigger interceptor, you must write your httpCli to HttpRequest.
+			Why use Interceptor? Set Header, Params and ErrorHandling for all the time, then use interceptor. --> Interceptor is service,
+			and it belongs to HTTP_INTERCEPTORS -- useClass --> to accept multi provide, add multi: true. --> Interceptor will affect
+			all http or httpCli request. We add Crud service to interceptor service file to define which one we want to response and
+			you also have to inject the interceptor to specific component, otherwise, it will response to all httpCli request. And
+			To trigger interceptor, you must write your httpCli to HttpRequest.
+		</p>
+		<p>
+			Interceptor will be trigger every http request, if you load in ngOnInit, then it starts at beginning. --> Let's discuss how
+			to do auth interceptor(I donot do it in this case) --> Let say you have a url looks like this: https://asdfasdf.json?auth:token_string,
+			then in authService you have getToken func, in the http request service you donot need list completed url, you only write
+			https://asdfasdf.json as the url, the in the interceptor inside clone function params: req.params.set('auth', this.fbService.getFbToken())
+			--> In this way you can add auth token to url, If you cannot get the token, then your http request would be failed.
+		</p>
+		<p class="fz2em">
+			Everytime, all intrceptors would be triggered, the order you write them in providers, the the order for execution.
 		</p>
 	</div>
 	<div class="column"></div>

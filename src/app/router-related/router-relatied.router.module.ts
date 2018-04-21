@@ -15,31 +15,34 @@ import { CanDeactivateService } from '../../services/internal/can-deactivate.ser
 import { ChairResolveService } from '../../services/chairs/chair-resolve.service';
 
 const routerRelatedRoute: Routes = [
-	{ path: 'mainAboutRouter', component: RouterMainComponent },
-	{ path: 'next-compo', component: NextContentComponent },
 	{
-		path: 'users',
-		canActivateChild: [AuthGuardService],
-		component: UsersComponent,
-		children: [
-			{ path: ':id/:name', component: UserComponent }
-		]
-	},
-	{
-		path: 'chairs',
-		/* usually donot block parent compo, u can block children compo */
-		/* canActivate: [AuthGuardService],  */
-		component: ChairsComponent,
-		children: [
+		path: '', component: RouterMainComponent, children: [
+			{ path: 'next-compo', component: NextContentComponent },
 			{
-				path: ':id', component: ChairComponent,
-				resolve: {
-					theChair: ChairResolveService
-				}
+				path: 'users',
+				canActivateChild: [AuthGuardService],
+				component: UsersComponent,
+				children: [
+					{ path: ':id/:name', component: UserComponent }
+				]
 			},
 			{
-				path: ':id/edit', component: EditChairComponent,
-				canDeactivate: [CanDeactivateService]
+				path: 'chairs',
+				/* usually donot block parent compo, u can block children compo */
+				/* canActivate: [AuthGuardService],  */
+				component: ChairsComponent,
+				children: [
+					{
+						path: ':id', component: ChairComponent,
+						resolve: {
+							theChair: ChairResolveService
+						}
+					},
+					{
+						path: ':id/edit', component: EditChairComponent,
+						canDeactivate: [CanDeactivateService]
+					}
+				]
 			}
 		]
 	}

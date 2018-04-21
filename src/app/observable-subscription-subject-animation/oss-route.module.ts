@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { OssMainComponent } from './oss-main/oss-main.component';
 
 const ossRoute: Routes = [
-	{ path: 'oss', component: OssMainComponent }
+	{ path: '', component: OssMainComponent }
 ];
 
 @NgModule({

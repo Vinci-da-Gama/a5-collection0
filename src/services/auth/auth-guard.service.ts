@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
-	CanActivate, CanActivateChild,
+	CanLoad, CanActivate, CanActivateChild,
 	ActivatedRouteSnapshot, RouterStateSnapshot, Router
 } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -14,6 +14,16 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
 		private fbAuthService: FbAuthService,
 		private router: Router
 	) { }
+
+	canLoad(
+		routeSnap: ActivatedRouteSnapshot,
+		stateSnap: RouterStateSnapshot
+	): Observable<boolean> | Promise<boolean> | boolean {
+		// this will cause only login person can go to lazy child route.
+		// return this.canActivate(routeSnap, stateSnap);
+		// always allow going to lazy child route.
+		return true;
+	}
 
 	canActivate(
 		routeSnap: ActivatedRouteSnapshot,

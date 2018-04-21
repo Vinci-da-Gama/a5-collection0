@@ -6,8 +6,11 @@ import { ExchangeRateComponent } from './exchange-rate-map/exchange-rate.compone
 import { SupplyRateComponent } from './pass-rate-by-route-parameter/supply-rate.component';
 
 const mapexrateRoute: Routes = [
-	{ path: 'map-exchangeRage', component: ExchangeRateComponent },
-	{ path: 'support-rate/:rate', component: SupplyRateComponent }
+	{
+		path: '', component: ExchangeRateComponent, children: [
+			{ path: 'support-rate/:rate', component: SupplyRateComponent }
+		]
+	}
 ];
 
 @NgModule({

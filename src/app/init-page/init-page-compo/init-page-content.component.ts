@@ -50,17 +50,7 @@ export class InitPageContentComponent implements OnInit {
 		private curdService: CrudService
 	) { }
 
-	ngOnInit() {
-		this.curdService.getMenu()
-			.subscribe((data) => {
-				this.receiveData = data['menu'];
-				console.log('57 -- ', this.receiveData);
-			});
-		this.curdService.getForEvent()
-			.subscribe((data: HttpEvent<Object>) => {
-				console.log(data.type === HttpEventType.Sent);
-			});
-	}
+	ngOnInit() { }
 
 	getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date }) {
 		return {

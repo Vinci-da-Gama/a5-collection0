@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CpcmssComponent } from '../../featureComponents/cpcmss/cpcmss.component';
 
 const cpcmssRoute: Routes = [
-	{ path: 'slicer-clickoutpopover-moment', component: CpcmssComponent }
+	{ path: '', component: CpcmssComponent }
 ];
 
 @NgModule({
