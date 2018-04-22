@@ -9,6 +9,7 @@
 		"webpack:server": "webpack --config webpack.server.config.js --progress --colors",
 		"build:ssr": "npm run build:client-server-bundles && npm run webpack:server",
 		"serve:ssr": "node dist/universalRenderingServer.js",
+		"pd": "ng build --prod --aot",
 		"test": "ng test",
 		"lint": "ng lint",
 		"e2e": "ng e2e"

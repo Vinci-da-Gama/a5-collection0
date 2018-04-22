@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LcefheRouteModule } from './lcefhe-route.module';
+import { FormReactiveformCommonModule } from '../share-module/form-reactiveform-common/form-reactiveform-common.module';
 
 import { LcefheMainComponent } from './lcefhe-main/Lcefhe-main.component';
+import { CustomDefinePathComponent } from '@customDefinePath/custom-define-path.component';
+import { FormMoreComponent } from '@formMore/form-more.component';
 
 @NgModule({
 	imports: [
-		CommonModule,
+		FormReactiveformCommonModule,
 		LcefheRouteModule
 	],
 	declarations: [
-		LcefheMainComponent
+		LcefheMainComponent,
+		CustomDefinePathComponent,
+		FormMoreComponent
 	]
 })
 export class CanLazyloadEnvPathFormMoreBackendErrorhandlModule { }

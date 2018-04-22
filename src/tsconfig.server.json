@@ -4,6 +4,10 @@
 		"outDir": "../out-tsc/app",
 		"module": "commonjs",
 		"baseUrl": "./",
+		"paths": {
+			"@customDefinePath/*": ["featureComponents/custom-define-path/*"],
+			"@formMore/*": ["featureComponents/form-more/*"]
+		},
 		"types": []
 	},
 	"exclude": [

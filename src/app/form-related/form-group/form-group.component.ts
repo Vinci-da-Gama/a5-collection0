@@ -140,25 +140,25 @@ export class FormGroupComponent implements OnInit {
 		if (isSignupForm) {
 			this.afAuthService.registerUser(fVal.suemail, fVal.supassword)
 				.then((res) => {
-					console.log('130 -- ', res);
+					console.log('143 -- ', res);
 					this.signupForm.reset();
 					this.isLoading = false;
 					this.handleModal(isSignupForm);
 				})
 				.catch((err) => {
-					console.log('136 -- ', err);
+					console.log('149 -- ', err);
 					this.isLoading = false;
 				});
 		} else {
 			this.afAuthService.signinUser(fVal.siemail, fVal.sipassword)
 				.then((res) => {
-					console.log('142 -- ', res);
+					console.log('155 -- ', res);
 					this.signinForm.reset();
 					this.isLoading = false;
 					this.handleModal(isSignupForm);
 				})
 				.catch((err) => {
-					console.log('148 -- ', err);
+					console.log('161 -- ', err);
 					this.isLoading = false;
 				});
 		}
