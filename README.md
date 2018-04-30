@@ -14,6 +14,23 @@ Then
 cp npm-install.txt and __package-sample.json to New Pj Folder
 ```
 
+## User Https for localhost
+RSC: [Angular CLI To Apply Https](https://medium.com/@rubenvermeulen/running-angular-cli-over-https-with-a-trusted-certificate-4a0d5f92747a)
+```
+1. go one step outside, then cd generate-trusted-ssl-certificate-master, 
+Change C(Country) to AU, Change ST(State) to VCT and L to anything, 
+then run cmd: bash generate.sh
+2. cp server.crt and server.key to your pj foler, mkdir ssl, then paste them in ssl folder.
+3. double click server.srt, (may need input system password) --> double click localhost certificate,
+click trust, then choose always trust.
+4. Now, you have to completely close your browser and reopen again, no matter what.
+6. run ng serve --ssl, then go browsers go this url https://localhost:4200/, you will see app run on https.
+7. one hint, if u use incognito mode of chrome, it is ok.
+8. one hint, if u run normal mode of chrome, it will do infinite reload, looks like chorme has problem.
+9. if you have to use redux devtool for debuging, then use ng serve without --ssl.
+10. https://localhost:4200/
+```
+
 ## You can find all possible blueprints in the table below:
 
 Scaffold  | Usage

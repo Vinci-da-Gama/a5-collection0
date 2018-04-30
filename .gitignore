@@ -48,3 +48,4 @@ src/environments/firebase.config.ts
 npm-install.txt
 .editorconfig
 README.md
+ssl/
