@@ -146,7 +146,7 @@
 					Email
 				</a>
 			</div>
-			<div class="ui red message" *ngIf="siemail.errors && (siemail.dirty || siemail.touched)">
+			<div class="text-danger" *ngIf="siemail.errors && (siemail.dirty || siemail.touched)">
 				<p *ngIf="siemail.errors.required">
 					Email is required.
 				</p>

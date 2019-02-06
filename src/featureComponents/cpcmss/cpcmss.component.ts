@@ -26,9 +26,9 @@ export class CpcmssComponent {
 		console.log(now.add(7, 'days').format()); */
 	}
 
-	onClickedOutside(e: Event) {
+	/*onClickedOutside(e: Event) {
 		console.log('Clicked outside:', e);
 		alert(`waht is your click out action -- ${e.type}.`);
-	}
+	}*/
 
 }
